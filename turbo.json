@@ -1,0 +1,30 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "pipeline": {
+        "build": {
+            "outputs": [
+                ".next/**",
+                "dist/**"
+            ],
+            "dependsOn": [
+                "^build",
+                "^db:generate"
+            ]
+        },
+        "lint": {
+            "outputs": []
+        },
+        "clean": {
+            "cache": false
+        },
+        "db:generate": {
+            "inputs": [
+                "prisma/schema.prisma"
+            ],
+            "cache": false
+        }
+    },
+    "globalEnv": [
+        "DATABASE_URL"
+    ]
+}

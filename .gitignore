@@ -1,0 +1,18 @@
+node_modules/
+.pnpm-store/
+.turbo
+
+# debug
+.pnpm-debug.log*
+*.tsbuildinfo
+
+# sensitive data
+.env*
+!.env.example
+next-env.d.ts
+
+# compiled stuff
+.next/
+*.js
+*.js.map
+*.d.ts

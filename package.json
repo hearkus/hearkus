@@ -1,0 +1,23 @@
+{
+  "name": "@hearkus/root",
+  "version": "0.0.0",
+  "private": true,
+  "description": "An innovative platform for music lovers to explore and share their passions.",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "clean": "turbo clean",
+    "clean:node": "rm -rf node_modules",
+    "format": "prettier --prose-wrap=always --write \"**/*.{ts,tsx,md}\"",
+    "db:generate": "turbo db:generate"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.1",
+    "turbo": "1.4.7",
+    "typescript": "^4.9.4"
+  },
+  "author": "Pedro Henrique <me@axyria.dev>",
+  "packageManager": "pnpm@7.21.0",
+  "license": "AGPL-3.0"
+}
