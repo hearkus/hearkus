@@ -5,9 +5,10 @@
   "description": "An innovative platform for music lovers to explore and share their passions.",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "build": "turbo build",
-    "lint": "turbo lint",
-    "clean": "turbo clean",
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean",
     "clean:node": "rm -rf node_modules",
     "format": "prettier --prose-wrap=always --write \"**/*.{ts,tsx,md}\"",
     "db:generate": "turbo db:generate"
