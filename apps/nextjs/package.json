@@ -2,11 +2,12 @@
   "name": "@hearkus/nextjs",
   "version": "0.1.0",
   "private": true,
-  "description": "Next.js frontend for @hearkus/root.",
+  "description": "Next.js frontend and backend implementation for @hearkus/root.",
   "license": "AGPL-3.0",
   "scripts": {
     "build": "dotenv -e ../../.env.prod next build",
     "dev": "dotenv -e ../../.env.dev node wrapper.run.mjs",
+    "start": "dotenv -e ../../.env.prod next start",
     "clean": "rm -rf .next .turbo node_modules",
     "lint": "next lint"
   },

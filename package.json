@@ -10,7 +10,7 @@
     "lint": "turbo run lint",
     "clean": "turbo run clean",
     "clean:node": "rm -rf node_modules",
-    "format": "eslint **/*.{mjs,ts,tsx} --fix",
+    "format": "prettier docs/*.md --prose-wrap=always --fix --write && eslint **/*.{mjs,ts,tsx} --fix",
     "db:generate": "turbo db:generate"
   },
   "devDependencies": {
