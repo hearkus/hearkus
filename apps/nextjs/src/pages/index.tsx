@@ -19,7 +19,12 @@
  */
 
 import React from 'react';
+import { trpc as client } from '../utils/trpc';
 
 export default function IndexPage() {
-  return <div>Hello world!</div>;
+  const user = client.user['@me'].useQuery();
+  if (!user.data) {
+    return <div>Loading...</div>;
+  }
+  return <div>Result: {user.data}</div>;
 }

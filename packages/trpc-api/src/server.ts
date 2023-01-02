@@ -18,7 +18,19 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-export * from './context';
-export * from './definitions';
-export * from './server';
-export * from './router';
+import { inferAsyncReturnType, initTRPC } from '@trpc/server';
+import { transformer } from './definitions';
+import { HearkusContext } from './context';
+
+export function buildServer() {
+  return initTRPC.context<HearkusContext>().create({
+    transformer,
+    errorFormatter: shape => shape,
+  });
+}
+
+export type HearkusRPC = inferAsyncReturnType<typeof buildServer>;
+
+export type HearkusBaseRouter = HearkusRPC['router'];
+
+export type HearkusProcedure = HearkusRPC['procedure'];

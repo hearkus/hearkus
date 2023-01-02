@@ -18,19 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { findEnv, parse } from './shared.env.mjs';
+// This file represents definitions - useful constants used within the codebase.
 
-const NextEnvSchema = z =>
-  z.object({
-    NEXT_PORT: z.string().regex(/^[0-9]+$/, 'a valid port number'), // [F]
-    CORS_ENABLED: z
-      .string()
-      .regex(/^(true|false)$/, 'a boolean')
-      .transform(v => v === 'true'), // [F]
-    POSTGRES_URL: z.string(), // [B]
-    REDIS_URL: z.string(), // [B]
-  });
-
-const env = findEnv();
-
-export default z => parse(NextEnvSchema(z), env);
+// The (de)serialization trasforming engine used in tRPC.
+export const transformer = await import('superjson');

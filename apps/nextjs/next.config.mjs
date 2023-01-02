@@ -18,8 +18,15 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+/** @type {import("next").NextConfig} */
 const config = {
   reactStrictMode: true,
+  transpilePackages: ['@hearkus/trpc-api'],
+  typescript: { ignoreBuildErrors: !!process.env.CI },
+  webpack: config => {
+    config.experiments = { topLevelAwait: true, layers: true };
+    return config;
+  },
 };
 
 /**
@@ -30,10 +37,6 @@ const config = {
  * This is useful for simple CI/CD setups where you don't want to
  * provide the environment variables.
  */
-if (!process.env.SKIP_ENV_VALIDATION) {
-  const { z } = await import('zod');
-  const env = await import('../../secrets/nextjs.env.mjs');
-  /* config.env = */ env.default(z);
-}
+!process.env.SKIP_ENV_VALIDATION && (await import('./src/environment.mjs'));
 
 export default config;

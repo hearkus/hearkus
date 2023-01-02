@@ -24,7 +24,8 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "prettier"
+    "prettier",
+    "plugin:@next/next/recommended"
   ],
   "rules": {
     "header/header": [
@@ -61,6 +62,9 @@
     "no-mixed-spaces-and-tabs": "error",
     "indent": ["error", 2, { "SwitchCase": 1 }],
     "arrow-parens": ["error", "as-needed"],
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-empty-pattern": "off",
+    "@typescript-eslint/no-empty-interface": "off"
   }
 }

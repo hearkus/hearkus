@@ -18,7 +18,21 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-export * from './context';
-export * from './definitions';
-export * from './server';
-export * from './router';
+import { z } from 'zod';
+
+const NextEnvSchema = z.object({
+  NEXT_PORT: z.string().regex(/^[0-9]+$/, 'a valid port number'), // [F]
+  CORS_ENABLED: z
+    .string()
+    .regex(/^(true|false)$/, 'a boolean')
+    .transform(v => v === 'true'), // [F]
+  POSTGRES_URL: z.string(), // [B]
+  REDIS_URL: z.string(), // [B]
+});
+
+const result = NextEnvSchema.safeParse(process.env);
+if (!result.success) {
+  console.error(`❌ Invalid environment variables: ${result.error.message}`);
+  throw new Error('Invalid environment variables');
+}
+export default result.data;

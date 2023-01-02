@@ -9,6 +9,10 @@
       "dependsOn": ["^db:generate"],
       "cache": false
     },
+    "start": {
+      "dependsOn": ["^build", "^db:generate"],
+      "cache": false
+    },
     "lint": {
       "outputs": []
     },

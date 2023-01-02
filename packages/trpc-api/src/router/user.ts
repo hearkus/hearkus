@@ -18,7 +18,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-export * from './context';
-export * from './definitions';
-export * from './server';
-export * from './router';
+import { RouterOptions } from '.';
+
+export default function User({ proc, apply }: RouterOptions) {
+  return apply({
+    '@me': proc.query(({}) => 'Hello, world!'),
+  });
+}

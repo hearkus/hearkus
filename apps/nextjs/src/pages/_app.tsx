@@ -18,7 +18,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-export * from './context';
-export * from './definitions';
-export * from './server';
-export * from './router';
+import { AppType } from 'next/app';
+import { trpc } from '../utils/trpc';
+
+const HearkusNext: AppType = ({ Component, pageProps }) => {
+  return <Component {...pageProps} />;
+};
+
+export default trpc.withTRPC(HearkusNext);

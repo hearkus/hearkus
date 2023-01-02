@@ -18,22 +18,39 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-export function death(message) {
-  console.error(`❌ ${message}`);
-  throw new Error(message);
+import { HearkusProcedure, HearkusBaseRouter } from '../server';
+import User from './user';
+
+/**
+ * All properties required to build a router.
+ * @see build
+ */
+type CreateRouterOptions = {
+  procedure: HearkusProcedure;
+  apply: HearkusBaseRouter;
+};
+
+/**
+ * Creates a router object from the parameters passed in {@link opts}.
+ * @param opts
+ */
+export function createRouterInner(opts: CreateRouterOptions) {
+  return {
+    proc: opts.procedure,
+    apply: opts.apply,
+  };
 }
 
-export function parse(schema, env) {
-  const result = schema.safeParse(env);
-  if (!result.success) {
-    death(`Invalid environment variables: ${result.error.message}`);
-  }
-  return result.data;
+/**
+ * Initializes a router object from the given properties.
+ * @see createRouterInner
+ */
+export function buildRouter(opts: RouterOptions) {
+  return opts.apply({
+    user: User(opts),
+  });
 }
 
-export function findEnv() {
-  if (!process.env) {
-    death('Environment variables were not provided.');
-  }
-  return process.env;
-}
+export type RouterOptions = ReturnType<typeof createRouterInner>;
+
+export type HearkusRouter = ReturnType<typeof buildRouter>;

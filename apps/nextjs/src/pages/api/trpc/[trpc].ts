@@ -1,4 +1,4 @@
-/*
+/*[object Object]
  * Hearkus, a free and open-source platform for discovering and sharing
  * feedback on music.
  *
@@ -17,8 +17,26 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+import {
+  createContext,
+  buildServer,
+  createRouterInner,
+  buildRouter,
+} from '@hearkus/trpc-api';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { createNextApiHandler } from '@trpc/server/adapters/next';
+import environment from '../../../environment.mjs';
 
-export * from './context';
-export * from './definitions';
-export * from './server';
-export * from './router';
+const client = await buildServer();
+
+const router = await buildRouter(
+  createRouterInner({
+    apply: client.router,
+    procedure: client.procedure,
+  }),
+);
+
+export default createNextApiHandler({
+  router,
+  createContext,
+});
