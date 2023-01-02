@@ -1,0 +1,27 @@
+@import '../../../common/display';
+
+nav#navigationBar,
+nav#navigationBar section {
+  @include flexbox-row;
+}
+
+nav#navigationBar {
+  justify-items: space-between;
+}
+
+nav#navigationBar section {
+  align-items: center;
+  text-align: center;
+}
+
+img#hearkusLogo {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+p#logoTitle {
+  display: inline-block;
+  padding-left: 1rem;
+  font-weight: 900;
+  font-size: 1.5rem;
+}

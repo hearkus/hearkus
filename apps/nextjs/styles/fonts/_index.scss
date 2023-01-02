@@ -1,0 +1,15 @@
+@use './material-icons';
+@use './inter';
+
+:root {
+  --font-primary: Inter, sans-serif;
+  --font-icons: 'Material Icons';
+}
+
+@mixin font-primary {
+  font-family: var(--font-primary);
+}
+
+@mixin font-icons {
+  font-family: var(--font-icons);
+}

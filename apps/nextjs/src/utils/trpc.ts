@@ -21,7 +21,7 @@
 import { createTRPCNext } from '@trpc/next';
 import { httpBatchLink, loggerLink } from '@trpc/client';
 import { inferRouterInputs, inferRouterOutputs } from '@trpc/server';
-import { type HearkusRouter, transformer } from '@hearkus/trpc-api';
+import { type HearkusRouter, transformer } from '@hearkus/trpc-router';
 
 function getBaseUrl() {
   if (typeof window !== 'undefined') return ''; // browser should use relative url

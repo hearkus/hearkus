@@ -20,6 +20,7 @@
 
 import { AppType } from 'next/app';
 import { client } from '@api';
+import '@styles/global.scss';
 
 const HearkusNext: AppType = ({ Component, pageProps }) => {
   return <Component {...pageProps} />;

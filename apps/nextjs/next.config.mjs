@@ -17,6 +17,10 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 /** @type {import("next").NextConfig} */
 const config = {
@@ -37,6 +41,7 @@ const config = {
  * This is useful for simple CI/CD setups where you don't want to
  * provide the environment variables.
  */
-!process.env.SKIP_ENV_VALIDATION && (await import('./src/environment.mjs'));
+!process.env.SKIP_ENV_VALIDATION &&
+  (await import('./src/utils/environment.mjs'));
 
 export default config;

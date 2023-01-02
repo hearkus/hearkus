@@ -1,13 +1,15 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": "./",
     "paths": {
-      "@root": ["./"],
-      "@pages": ["./pages"],
-      "@env": ["./utils/environment"],
-      "@api": ["./utils/trpc"],
-      "@utils": ["./utils"],
-      "@components": ["./components"]
+      "@root/*": ["./src/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@env": ["./src/utils/environment"],
+      "@api": ["./src/utils/trpc"],
+      "@utils/*": ["./src/utils/*"],
+      "@components/*": ["./src/components/*"],
+      "@styles/*": ["./styles/*"],
+      "@public/*": ["./public/*"]
     }
   },
   "extends": "../../tsconfig.json",

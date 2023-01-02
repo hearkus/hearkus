@@ -1,0 +1,10 @@
+@use '../definitions/colors';
+@import '../fonts';
+@import './display';
+
+body {
+  @include flexbox-column;
+  @include font-primary;
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
+}

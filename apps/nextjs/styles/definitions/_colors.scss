@@ -1,0 +1,10 @@
+@import './colors-dark';
+@import './colors-light';
+
+:root {
+  @include colors-dark;
+}
+
+html[data-theme='light'] {
+  @include colors-light;
+}

@@ -1,0 +1,8 @@
+@import '../../mobile/screen';
+
+@include for-phones-only {
+  @import '../../mobile/pages/home';
+}
+@include for-everything-else {
+  @import '../../desktop/pages/home';
+}

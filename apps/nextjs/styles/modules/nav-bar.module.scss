@@ -1,0 +1,8 @@
+@import '../mobile/screen';
+
+@include for-phones-only {
+  @import '../mobile/modules/nav-bar';
+}
+@include for-everything-else {
+  @import '../desktop/modules/nav-bar';
+}

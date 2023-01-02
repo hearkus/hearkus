@@ -1,0 +1,13 @@
+@use '../../../common/footer';
+@use '../../modules/nav-bar';
+@use './left';
+@use './right';
+@import '../../../common/display';
+
+.sidesWrapper {
+  @include flexbox-row;
+}
+
+.sidesWrapper div {
+  @include half-width;
+}

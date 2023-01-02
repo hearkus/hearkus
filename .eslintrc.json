@@ -63,8 +63,9 @@
     "indent": ["error", 2, { "SwitchCase": 1 }],
     "arrow-parens": ["error", "as-needed"],
     "prettier/prettier": "error",
-    "@typescript-eslint/no-explicit-any": "off",
     "no-empty-pattern": "off",
-    "@typescript-eslint/no-empty-interface": "off"
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-empty-function": "off"
   }
 }

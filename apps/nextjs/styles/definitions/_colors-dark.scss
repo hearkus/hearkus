@@ -1,0 +1,16 @@
+// The color scheme used in Hearkus.
+// - - - - - - - - - - - - - - - - -
+
+@mixin colors-dark {
+  // Primary colors
+  --color-primary: #7d8aff;
+  --color-text-primary: #f9f9f9;
+  --color-text-secondary: #a1a1a1;
+  --color-text-contrast: var(--color-text-primary);
+  --color-background-primary: #000000;
+
+  // Gradient colors
+  --color-gradient-primary: linear-gradient(90deg, #4a5cff 0%, #ff93ee 100%);
+  --color-gradient-secondary: linear-gradient(90deg, #001aff 0%, #ad00ff 100%);
+  --color-gradient-blob: var(--color-gradient-secondary);
+}

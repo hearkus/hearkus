@@ -22,7 +22,7 @@ import {
   buildServer,
   createRouterInner,
   buildRouter,
-} from '@hearkus/trpc-api';
+} from '@hearkus/trpc-router';
 import { createNextApiHandler } from '@trpc/server/adapters/next';
 
 const client = await buildServer();

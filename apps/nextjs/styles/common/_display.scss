@@ -1,0 +1,14 @@
+@mixin flexbox-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexbox-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin half-width {
+  width: 50%;
+  height: 100%;
+}

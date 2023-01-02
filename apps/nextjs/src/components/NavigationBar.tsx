@@ -18,17 +18,20 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { ThemeContextProvider } from '@components/ThemeContext';
-import NavigationBar from '@root/components/NavigationBar';
-import styles from '@styles/pages/home/index.module.scss';
+import utils from '@styles/modules/utils.module.scss';
+import styles from '@styles/modules/nav-bar.module.scss';
+import Logo from '@public/hearkus-logo.svg';
+import Image from 'next/image';
 
-export default function IndexPage() {
+export default function NavigationBar() {
   return (
-    <ThemeContextProvider>
-      <NavigationBar />
-      <div className={styles.sidesWrapper}>
-        <div className={styles.side}></div>
-      </div>
-    </ThemeContextProvider>
+    <nav id={styles.navigationBar}>
+      <section>
+        <Image src={Logo} alt="[Logo]" id={styles.hearkusLogo} />
+        <p className={utils.lowercase} id={styles.logoTitle}>
+          Hearkus
+        </p>
+      </section>
+    </nav>
   );
 }
