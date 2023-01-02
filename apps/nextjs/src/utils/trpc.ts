@@ -28,7 +28,7 @@ function getBaseUrl() {
   return `http://localhost:${process.env.PORT ?? 3000}`;
 }
 
-export const trpc = createTRPCNext<HearkusRouter>({
+export const client = createTRPCNext<HearkusRouter>({
   config: () => ({
     transformer,
     links: [

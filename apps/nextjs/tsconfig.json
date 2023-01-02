@@ -1,4 +1,15 @@
 {
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@root": ["./"],
+      "@pages": ["./pages"],
+      "@env": ["./environment"],
+      "@api": ["./utils/trpc"],
+      "@utils": ["./utils"],
+      "@components": ["./components"]
+    }
+  },
   "extends": "../../tsconfig.json",
   "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts"],
   "exclude": []

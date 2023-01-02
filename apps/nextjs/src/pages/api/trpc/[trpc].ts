@@ -23,9 +23,7 @@ import {
   createRouterInner,
   buildRouter,
 } from '@hearkus/trpc-api';
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { createNextApiHandler } from '@trpc/server/adapters/next';
-import environment from '../../../environment.mjs';
 
 const client = await buildServer();
 

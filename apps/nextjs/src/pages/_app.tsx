@@ -19,10 +19,10 @@
  */
 
 import { AppType } from 'next/app';
-import { trpc } from '../utils/trpc';
+import { client } from '@api';
 
 const HearkusNext: AppType = ({ Component, pageProps }) => {
   return <Component {...pageProps} />;
 };
 
-export default trpc.withTRPC(HearkusNext);
+export default client.withTRPC(HearkusNext);
