@@ -7,9 +7,9 @@ course subject to change if an alternative that fits our needs better.
 
 Overall, Hearkus is not a complex application aside from its algorithmic core,
 therefore we I feel we could simply stick to simple to maintain yet powerful
-technologies like [Node.js] and [TypeScript]. While it may not be the fastest
-solution available, it is fast enough for our needs and can be easily maintained
-by a small team of developers.
+technologies like [Node.js], [TypeScript], and [tRPC]. While it may not be the
+fastest solution available, it is fast enough for our needs and can be easily
+maintained by a small team of developers.
 
 For the database, we plan to use [PostgreSQL] with [Prisma] due to its
 simplicity, reliability, and performance.
@@ -18,6 +18,7 @@ simplicity, reliability, and performance.
 [typescript]: https://www.typescriptlang.org/
 [postgresql]: https://www.postgresql.org/
 [prisma]: https://www.prisma.io/
+[trpc]: https://trpc.io/
 
 ## Artwork
 
@@ -88,6 +89,20 @@ I appreciate any suggestions and help on this matter. 😁
 
 [docker]: https://www.docker.com/
 [freebsd jails]: https://www.freebsd.org/doc/handbook/jails.html
+
+## Extra choices
+
+- [Next.js] can be used for both the backend and frontend, allowing for a single
+  codebase for both the website and internal communications API.
+- superjson can be used for (de)serialization of JSON data, expanding built-in
+  JSON capabilities to support more data types.
+- Using [pnpm] for package management, since it is a fast and reliable package
+  manager that is easy to use and maintain.
+- Using [Expo] for React Native development, since it allows deployment to both
+  iOS and Android platforms with ease.
+
+[superjson]: https://github.com/blitz-js/superjson
+[expo]: https://expo.io/
 
 ## Conclusion
 
