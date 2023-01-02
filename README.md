@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="./assets/hearkus-logo-plus-text.svg" alt="" width="32" />
+    <img src="./assets/hearkus-logo-plus-text.svg" alt="" width="256" />
 </h1>
 
 An innovative platform for music lovers to explore and share their passions. We

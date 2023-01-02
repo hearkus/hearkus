@@ -26,6 +26,7 @@ const NextEnvSchema = z.object({
     .string()
     .regex(/^(true|false)$/, 'a boolean')
     .transform(v => v === 'true'), // [F]
+  POSTGRES_URL: z.string(), // [B]
   REDIS_URL: z.string(), // [B]
 });
 
