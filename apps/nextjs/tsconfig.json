@@ -4,7 +4,7 @@
     "paths": {
       "@root": ["./"],
       "@pages": ["./pages"],
-      "@env": ["./environment"],
+      "@env": ["./utils/environment"],
       "@api": ["./utils/trpc"],
       "@utils": ["./utils"],
       "@components": ["./components"]
