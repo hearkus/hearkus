@@ -8,13 +8,13 @@ give you the chance to rate and review the music you hear.
 
 ## Documentation
 
-1. [🧐 What is Hearkus?](/blob/trunk/docs/1-what-is.md)
-2. [💻 Technology stack](/blob/trunk/docs/2-tech-stack.md)
-3. [🔥 Future marketing strategies](/blob/trunk/docs/3-marketing.md)
-4. [✨ Developer guide](/blob/trunk/docs/4-developer-guide.md)
-5. [🔨 Terms of Service and Privacy Policy](/blob/trunk/docs/5-terms-of-use.md)
-6. [📝 License](/blob/trunk/LICENSE.txt)
-7. [🔗 Attribution](/tree/trunk/attribution)
+1. [🧐 What is Hearkus?](https://github.com/hearkus/hearkus/blob/trunk/docs/1-what-is.md)
+2. [💻 Technology stack](https://github.com/hearkus/hearkus/blob/trunk/docs/2-tech-stack.md)
+3. [🔥 Future marketing strategies](https://github.com/hearkus/hearkus/blob/trunk/docs/3-marketing.md)
+4. [✨ Developer guide](https://github.com/hearkus/hearkus/blob/trunk/docs/4-developer-guide.md)
+5. [🔨 Terms of Service and Privacy Policy](https://github.com/hearkus/hearkus/blob/trunk/docs/5-terms-of-use.md)
+6. [📝 License](https://github.com/hearkus/hearkus/blob/trunk/LICENSE.txt)
+7. [🔗 Attribution](https://github.com/hearkus/hearkus/tree/trunk/attribution)
 
 ## Roadmap
 
