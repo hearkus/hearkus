@@ -22,9 +22,13 @@ import { findEnv, parse } from './shared.env.mjs';
 
 const NextEnvSchema = z =>
   z.object({
-    // NODE_ENV: z.enum(['development', 'test', 'production']),
-    API_ENDPOINT: z.string(),
-    NEXT_PORT: z.string(),
+    NEXT_PORT: z.string().regex(/^[0-9]+$/, 'a valid port number'), // [F]
+    CORS_ENABLED: z
+      .string()
+      .regex(/^(true|false)$/, 'a boolean')
+      .transform(v => v === 'true'), // [F]
+    POSTGRES_URL: z.string(), // [B]
+    REDIS_URL: z.string(), // [B]
   });
 
 const env = findEnv();
