@@ -182,7 +182,7 @@ punitive damages.
 
 You agree to defend, indemnify, and hold harmless Hearkus, Inc., its affiliates, and their respective officers, directors, agents, and employees, from and against any claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney's fees) arising from: (i) your use of and access to the Hearkus platform; (ii) your violation of any term of these Terms; (iii) your violation of any third-party right, including without limitation any copyright, property, or privacy right; or (iv) any claim that your content caused damage to a third party. This defense and indemnification obligation will survive these Terms and your use of the Hearkus platform.
 
-## Limitation of Liability
+### Limitation of Liability
 
 In no event shall Hearkus, Inc., nor its directors, employees, partners, agents,
 suppliers, or affiliates, be liable for any indirect, incidental, special,
@@ -207,8 +207,6 @@ provisions shall remain in full force and effect.
 These terms constitute the entire agreement between you and us regarding
 Hearkus. They supersede any prior agreements or understandings, whether written
 or oral.
-
-## Miscellaneous
 
 ## Privacy Policy
 
