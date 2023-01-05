@@ -40,8 +40,6 @@ It is worth emphasizing that in this document:
   and location;
 - The term "warranty" refers to any assurance that a product or service will perform
   to a certain standard or will not fail to perform in a certain way;
-- A material revision means a change to the Terms that is significant enough to
-  warrant a new version of the Terms. In other words, a material revision is a
 
 ## Changes to the Terms of Service
 
